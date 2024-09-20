@@ -91,3 +91,10 @@ body {
   height: 65%;
   border-radius: 10px;
 }
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: min(42px, 8vh);
+}
