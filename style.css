@@ -1,5 +1,37 @@
-body {
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 #main-grid {
@@ -31,26 +63,34 @@ body {
   grid-area: content;
   background-color: lightgray;
 
+  padding: 24px 18px 24px 12px;
+
   display: grid;
-  grid-template: 1fr 4fr 1fr 4fr / 3fr 1fr;
+  gap: 16px;
+  grid-template: 1fr 10fr 1fr 10fr / 3fr 1fr;
 }
 
 #main-projects {
   grid-area: 2 / 1 / 5 / 2;
   display: grid;
+  gap: 18px;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 }
 
 #main-announcements {
-  grid-area: 1 / 2 / 3 / 3;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+#trending-panel {
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 #main-trending {
-  grid-area: 3 / 2 / 5 / 3;
+  grid-area: 3 / 2 / 4 / 3;
 }
 
-#search-img {
-  background-color: red;
+#trending-panel {
+  grid-area: 4 / 2 / 5 / 3;
 }
 
 #search {
@@ -60,9 +100,18 @@ body {
   width: 75%;
 }
 
-.b {
-  margin: 5%;
-  background-color: gold;
+#sidebar {
+  padding-left: 16px;
+}
+
+#side-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#main-user-icon {
+  width: 48px;
 }
 
 .center-margin {
@@ -88,8 +137,13 @@ body {
 
 .panel {
   background-color: white;
-  height: 65%;
+  height: 1fr;
   border-radius: 10px;
+}
+
+.project {
+  background-color: white;
+  border-radius: 8px;
 }
 
 .sidebar-option {
@@ -97,4 +151,14 @@ body {
   align-items: center;
   gap: 8px;
   height: min(42px, 8vh);
+}
+
+.user-handle {
+  display: flex;
+}
+
+.line {
+  background-color: black;
+  height: 1px;
+  width: 1fr;
 }
