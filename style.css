@@ -37,7 +37,7 @@ img {
 #main-grid {
   display: grid;
   grid-template-rows: max(150px, 20vh) minmax(0, calc(100vh - max(150px, 20vh)));
-  grid-template-columns: max(200px, 25vw) auto;
+  grid-template-columns: max(200px, 20vw) auto;
   grid-template-areas:
     "sidebar header"
     "sidebar content";
@@ -114,6 +114,17 @@ img {
   width: 48px;
 }
 
+#announcements-panel {
+  padding: 20px;
+}
+
+#trending-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  justify-content: space-between;
+}
+
 .center-margin {
   display: flex;
   margin: 10px;
@@ -142,8 +153,49 @@ img {
 }
 
 .project {
+  display: flex;
   background-color: white;
   border-radius: 8px;
+  height: max(150px, 20vh);
+}
+
+.project-side-label {
+  width: 8px;
+  height: 100%;
+  background-color: gold;
+
+  border-radius: 8px 0 0 8px;
+}
+
+.project-content {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project-content > p {
+  font-size: 14px;
+}
+
+.project-options {
+  display: flex;
+  align-self: flex-end;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.project-options > img {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.announcement-title {
+  font-weight: bold;
 }
 
 .sidebar-option {
@@ -155,6 +207,10 @@ img {
 
 .user-handle {
   display: flex;
+}
+
+.user-handle > img {
+  margin-right: 8px;
 }
 
 .line {
