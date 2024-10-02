@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+
+  --grey: rgb(88, 88, 88);
 }
 
 *,
@@ -178,8 +180,9 @@ img {
   font-weight: bold;
 }
 
-.project-content > p {
+.project-content > p:not(.project-title) {
   font-size: 14px;
+  color: var(--grey);
 }
 
 .project-options {
@@ -198,6 +201,11 @@ img {
   font-weight: bold;
 }
 
+.announcement-text {
+  font-size: small;
+  color: var(--grey);
+}
+
 .sidebar-option {
   display: flex;
   align-items: center;
@@ -213,8 +221,35 @@ img {
   margin-right: 8px;
 }
 
+.user-tools-button {
+  background-color: cornflowerblue;
+  color: white;
+
+  border-radius: 15px;
+  border-style: none;
+  width: 8vw;
+  height: 30px;
+
+  transition: all 0.2s;
+}
+
+.user-tools-button:hover {
+  background-color: white;
+  color: cornflowerblue;
+  border: 2px solid cornflowerblue;
+
+  padding-bottom: 3px;
+  height: 25px;
+  margin-bottom: 5px;
+
+  box-shadow: 0 3px 3px 1px gray;
+
+  cursor: pointer;
+}
+
 .line {
   background-color: black;
   height: 1px;
   width: 1fr;
+  margin: 10px 0;
 }
