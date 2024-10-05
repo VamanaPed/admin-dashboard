@@ -219,6 +219,11 @@ img {
   flex-direction: column;
 }
 
+.project-content > a {
+  padding-top: 8px;
+  color: rgb(177, 166, 119);
+}
+
 .project-title {
   font-weight: bold;
 }
@@ -292,6 +297,17 @@ img {
 
 .user-handle > img {
   margin-right: 8px;
+  width: 45px;
+}
+
+.user-handle-text {
+  padding-top: 8px;
+  font-weight: bold;
+}
+
+.user-speel {
+  font-size: small;
+  color: var(--grey);
 }
 
 .user-tools-button {
